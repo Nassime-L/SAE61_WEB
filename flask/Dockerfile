@@ -10,5 +10,6 @@ RUN pip install flask flask-mysqldb mysql-connector-python
 RUN mkdir -p /srv/templates
 COPY accueil.html /srv/templates
 COPY inscription.html /srv/templates
-COPY app2.py /srv
-CMD ["flask","--app","/srv/app2","run","--host=0.0.0.0"]
+COPY connexion.html /srv/templates
+COPY app.py /srv
+CMD ["flask","--app","/srv/app","run","--host=0.0.0.0"]

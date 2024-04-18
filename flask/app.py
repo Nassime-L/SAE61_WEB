@@ -27,7 +27,7 @@ def login():
 		password = Users['mdp']
 		hashed = generate_password_hash(password)
 		cur = mysql.connection.cursor()
-		cur.execute("INSERT INTO Utilisateurs(Nom, Prenom, identifiant, mail, password) VALUES (%s,%s,%s,%s,%s)",{Nom, Prenom, identifiant, mail, hashed})
+		cur.execute("INSERT INTO Utilisateurs(Nom, Prenom, identifiant, mail, password) VALUES (%s,%s,%s,%s,%s)",(Nom, Prenom, identifiant, mail, hashed))
 		mysql.connection.commit()
 		cur.close()
 		return "Vous êtes inscrit !"

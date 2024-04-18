@@ -17,7 +17,7 @@ services:
     image: flask:1.1
     container_name: flask
     restart: unless-stopped
-#     depends_on:
+#    depends_on:
 #      - mariadb
     ports:
       - "5000:5000"

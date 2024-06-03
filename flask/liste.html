@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Liste des identifiants</title>
+</head>
+<h1>Ci-dessous, la liste des identifiants :</h1>
+<body>
+<h1> Liste des identifiants : </h1>
+<ul>
+	{% for identifiant in id %}
+		<li>{{identifiant[0]}}</li>
+	{% endfor %}
+</ul>
+</body>
+</html>

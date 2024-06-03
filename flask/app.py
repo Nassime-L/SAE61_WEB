@@ -83,5 +83,13 @@ def connexion():
 			return "Identifiant ou mot de passe incorect"
 	return render_template('connexion.html')
 
+@app.route("/liste")
+def liste():
+	cur = mysql.connection.cursor()
+	cur.execute("SELECT identifiant FROM Utilisateurs")
+	id = cur.fetchall()
+	cur.close()
+	return render_template('liste.html', id=id)
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

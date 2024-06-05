@@ -11,5 +11,6 @@ RUN mkdir -p /srv/templates
 COPY accueil.html /srv/templates
 COPY inscription.html /srv/templates
 COPY connexion.html /srv/templates
+COPY liste.html /srv/templates
 COPY app.py /srv
 CMD ["flask","--app","/srv/app","run","--host=0.0.0.0"]
